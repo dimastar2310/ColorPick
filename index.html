@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ColorPicker 1</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="colors-box">
+        <li class="color color1"></li>
+        <li class="color color2"></li>
+        <li class="color color3"></li>
+        <li class="color color4"></li>
+        <li class="color color5"></li>
+        <li class="color color6"></li>
+      </ul>
+      <div class="selected_color">Selected Color</div>
+    </div>
+    <script>
+      // your code here...
+      var srcColors = document.querySelectorAll('.color');
+      var destColor = document.querySelector('.selected_color');
+      for(var clr of srcColors){
+            clr.onclick = clickHandler;
+        }
+           
+
+        // function clickHandler(event){
+        //     var color = window.getComputedStyle(event.target).backgroundColor;
+        //     console.log("computed background color:", color);
+        //     destColor.style.backgroundColor = color;
+        //     }
+
+            function clickHandler(event) {
+              var color = event.target.style.backgroundColor;
+              console.log("Color:", color);
+
+              if (color) {
+                destColor.style.backgroundColor = color;
+              }
+           }
+        // function clickHandler(event){
+        //   console.log(event);
+        //   console.log("the event target is :",event.target);
+        //     // console.log(event.target.innerText)
+        //     // console.log(event.target.innerHTML)
+        //     //lets grab its color
+        //     var color =event.target.style.backgroundColor;
+        //      console.log("type of color is ", color==='');
+        //     // console.log("the color is :",color);
+        //     // console.log("the content is:",event.target.textContent);
+
+        //     destColor.style.backgroundColor = color;
+        //     // // console.log("the bagraund color is : ",destColor.backgroundColor);
+        //     // console.log(destColor);
+        // }
+
+
+
+      console.log("hello");
+    </script>
+  </body>
+</html>
